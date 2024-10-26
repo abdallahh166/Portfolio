@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.jumbotron {
+    background: url('your-image.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.nav-link:hover {
+    color: #e63946 !important;
+}
