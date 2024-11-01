@@ -1,0 +1,390 @@
+:root {
+    --dark-color: rgba(0,120,255,0.7);
+    --light-color: #0d6efd;
+
+    --sec-color: #4e4e4e;
+    --background-color: rgba(0, 0, 0,0.9);
+    --defult-color: #f5f5f5;
+
+    --heading-font: "Raleway", sans-serif;
+}
+
+@font-face {
+    font-family: 'headfont';
+    src: url('/Raleway-VariableFont_wght.ttf');
+    font-weight: 700;
+}
+
+body {
+    height: 10000px;
+}
+
+.fs-60 {
+    font-size: 60px;
+}
+
+.sec-color {
+    color: var(--sec-color);
+}
+
+section {
+    background-color: var(--defult-color);
+}
+
+
+
+
+/* ---------------navbar-----------*/
+
+header{
+    background-color: var(--background-color);
+}
+
+.navbar-toggler .fa-bars {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: white;
+    transition: width 0.5s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a:focus::after {
+    width: 100%;
+}
+
+.navbar ul li a:focus {
+    color: #fff;
+    position: relative;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* scape the icone of the dropdown  (overwrite the bootstrap)*/
+.dropdown-toggle::after {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+/*------first11111-------------------*/
+
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/hero-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero .container {
+    color: white;
+    font-size: 20px;
+}
+
+.hero .container h2 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+/* ------------------SKills---------------------------------*/
+
+.about .progress {
+    height: 36px;
+    display: block;
+    background: none;
+    border-radius: 0;
+    margin-top: 15px;
+}
+
+.about .progress .skill {
+    color: var(--sec-color);
+    padding: 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.about .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.about .progress-bar-wrap {
+    background: #e9ecef;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.about .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: var(--light-color);
+}
+
+/* --------------------------services----------------------------*/
+
+
+.services-mf {
+    padding: 60px 0;
+}
+ 
+/* --------------glo heading of the sections------*/
+.title-box {
+    margin-bottom: 40px;
+}
+
+.title-a {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.subtitle-a {
+    color: var(--sec-color);
+    margin-bottom: 20px;
+}
+
+.line-mf {
+    width: 60px;
+    height: 4px;
+    background-color: var(--light-color);
+    margin: 0 auto;
+}
+
+
+.service-box {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ico-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 9px solid var(--light-color);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    color: var(--light-color);
+    font-size: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-box:hover .ico-circle {
+    transition: all 500ms ease;
+    color: #fff;
+    background-color: var(--light-color);
+    box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.s-title {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.s-description {
+    color: var(--sec-color);
+    font-size: 15px;
+}
+
+
+/* ----------------Counter---------------------*/
+/* Background and Overlay Styling */
+.section-counter {
+    background-image: url('/img/counters-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    position: relative;
+    height: 60vh;
+    background-attachment: fixed; /* This line will add the parallax effect */
+
+  }
+  
+  .overlay {
+    background-color: var(--dark-color);
+    padding: 60px 0;
+    position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  }
+  
+  /* Icon Circle Styling */
+  .icon-circle {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 9px solid rgba(255, 255, 255,0.8);
+    border-radius: 50%;
+    font-size: 30px;
+  }
+  
+  /* Text and Counter Box Styling */
+  .counter-box {
+    color: rgba(255, 255, 255,0.8);
+  }
+  
+  .counter-box h3 {
+    font-weight: bold;
+    font-size: 30px;
+    color:  rgba(255, 255, 255,0.8);
+  }
+  
+  .counter-box p {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  
+  /* ---------------------Portfolio-------------*/
+  
+
+.portfolio-mf {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.work-box {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+.work-img {
+    overflow: hidden; 
+}
+
+.work-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.work-box:hover .work-img img {
+    transform: scale(1.1);
+}
+
+.work-content {
+    background: #fff;
+    padding: 2rem 3% 1rem 4%;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+
+.w-title {
+    font-size: 18px;
+    color: #1e1e1e;
+}
+
+.w-more {
+    font-size: 14px;
+    color: var(--sec-color);
+}
+.w-more .w-ctegory {
+    color: var(--light-color);
+}
+
+.w-like {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--light-color);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    color: var(--light-color);
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+/* --------------Testimonial-----------------*/
+
+.testimonials {
+    position: relative;
+    padding: 60px 0;
+    background-image: url('/img/overlay-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color); 
+}
+
+.testimonial-box {
+    text-align: center;
+    color: #fff;
+    position: relative; 
+    z-index: 1; 
+}
+
+.author-test {
+    margin-bottom: 15px;
+}
+
+.author {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.description {
+    font-size: 20px;
+}
